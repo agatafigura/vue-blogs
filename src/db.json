@@ -1,0 +1,16 @@
+[
+      {
+          "id": 1,
+          "title": "New blog post",
+          "description": "Hello world!",
+          "author": "John Doe",
+          "publishedAt": "02-08-2022"
+      },
+      {
+        "id": 2,
+        "title": "Another blog post",
+        "description": "How are you?",
+        "author": "John Doe",
+        "publishedAt": "03-08-2022"
+    }
+]
