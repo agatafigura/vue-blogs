@@ -1,6 +1,7 @@
 <template>
-<div id="app">
-  <HelloWorld/>
+<div id="app" class="flex w-full lg:flex-row md:flex-row sm:flex-col xs:flex-col bg-white">
+  <CreatePost @postcreated="createPost"/>
+  <PostList v-if="showPosts"/>
 </div>
 </template>
 
@@ -26,12 +27,27 @@
 </style>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CreatePost from './components/CreatePost.vue'
+import PostList from './components/PostList.vue'
 export default {
-  
+  data() {
+    return {
+      showPosts: true
+    }
+  },
   
   components: {
-    HelloWorld
+    CreatePost,
+    PostList,
+  },
+
+  methods: {
+    createPost() {
+      this.showPosts = false;
+      setTimeout(() => {
+        this.showPosts = true
+      }, 50)
+    }
   }
 }
 </script>
